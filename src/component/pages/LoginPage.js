@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import LoginForm from '../Forms/LoginForm';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
+import { login } from '../../Actions/auth';
 import '../css/LoginPage.css';
 
 class LoginPage extends Component {
@@ -27,4 +28,4 @@ LoginPage.propTypes = {
   login : PropTypes.func.isRequired
 };
 
-export default LoginPage;
+export default connect(null, {login})(LoginPage);
